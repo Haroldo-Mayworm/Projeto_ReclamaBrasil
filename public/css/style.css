@@ -31,7 +31,11 @@ a {
 }
 
 /* Header */
-.header .container,
+.header {
+    border-bottom: 3px solid #d9dbdf;
+    padding-bottom: 20px;
+}
+
 .header-infos,
 .menu ul,
 .btn-act {
@@ -44,6 +48,42 @@ a {
     justify-content: space-between;
 }
 
+.header-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-container {
+    display: flex;
+    width: 650px;
+    margin: 30px 20px;
+}
+
+.search-container input[type='text'] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #f9e65c;
+    border-right: 0px;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+}
+
+.search-container input[type='text']:focus {
+    border-color: #f9e65c;
+    outline: none;
+}
+
+.search-container button {
+    padding: 10px 15px;
+    border: none;
+    border: 1px solid #f9e65c;
+    border-left: 0px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
 .menu ul {
     gap: 15px;
     margin-right: 50px;
@@ -51,14 +91,12 @@ a {
 
 .menu a {
     padding: 5px 20px;
-    background: #cccccc;
-    border-radius: 8px;
     font-size: 1.1rem;
-    transition: ease-in background 0.2s;
 }
 
 .menu a:hover {
-    background: #aaaaaa;
+    border-bottom: 3px solid #929497;
+    padding-bottom: 23px;
 }
 
 .btn-act button {
@@ -81,34 +119,103 @@ a {
 
 /* about */
 .about .container {
-    height: 350px;
+    height: 770px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
+.about h2 {
+    font-size: 3rem;
+}
+
 .about-list {
-    line-height: 3;
+    line-height: 2.5;
 }
 
 .about-list p {
     position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
 }
 
-.about-list p::before {
-    content: '';
-    position: block;
-    padding-right: 15px;
+.about-list img {
+    width: 40px;
+    height: 40px;
+    padding-right: 10px;
 }
 
-.about-list p:nth-child(1)::before {
-    content: '1';
+/* orientation */
+.orientation {
+    text-align: center;
+    margin-bottom: 150px;
 }
 
-.about-list p:nth-child(2)::before {
-    content: '2';
+.orientation h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
 }
 
-.about-list p:nth-child(3)::before {
-    content: '3';
+.orientation p {
+    font-size: 1.2rem;
+}
+
+/* Complaint */
+.complaint {
+    background: #f9e75ca6;
+    padding: 50px 0;
+    margin-bottom: 0px;
+    background-image: url(../../public/img/enchente.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.complaint-list {
+    display: grid;
+    gap: 30px;
+    justify-content: center;
+    grid-template-columns: repeat(3, 200px);
+}
+
+.complaint-list li {
+    display: grid;
+    position: relative;
+    background: #fff;
+    padding: 15px;
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+}
+
+.complaint-list li h3 {
+    margin-bottom: -25px;
+}
+
+.complaint-list li a {
+    position: absolute;
+    bottom: 0;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    border-top: 3px solid #d9dbdf;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+.footer li {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.footer li:nth-child(odd) {
+    padding-bottom: 10px;
 }
