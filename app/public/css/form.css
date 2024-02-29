@@ -44,6 +44,10 @@ a {
     align-items: center;
 }
 
+.header-top > img {
+    width: 120px;
+}
+
 .header .container {
     justify-content: space-between;
 }
@@ -62,21 +66,21 @@ a {
 .search-container input[type='text'] {
     flex: 1;
     padding: 10px;
-    border: 1px solid #f9e65c;
+    border: 1px solid #b25698;
     border-right: 0px;
     border-radius: 5px 0 0 5px;
     font-size: 16px;
 }
 
 .search-container input[type='text']:focus {
-    border-color: #f9e65c;
+    border-color: #b25698;
     outline: none;
 }
 
 .search-container button {
     padding: 10px 15px;
     border: none;
-    border: 1px solid #f9e65c;
+    border: 1px solid #b25698;
     border-left: 0px;
     color: white;
     border-radius: 0 5px 5px 0;
@@ -91,113 +95,82 @@ a {
 
 .menu a {
     padding: 5px 20px;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    text-transform: uppercase;
 }
 
 .menu a:hover {
-    border-bottom: 3px solid #929497;
+    border-bottom: 4px solid #b25698;
     padding-bottom: 23px;
 }
 
 .btn-act button {
     padding: 10px 20px;
-    background: rgb(218, 165, 32);
+    background: #b25698;
     border: none;
     cursor: pointer;
     border-radius: 8px;
     font-size: 1.1rem;
-    transition: ease-in background 0.2s;
+    transition: background 0.4s ease, color 0.4s ease;
 }
 
 .btn-act button:hover {
-    background: rgb(201, 152, 30);
+    background: #6a345b;
+    color: white;
 }
 
 .btn-act button:nth-child(odd) {
     margin-right: 15px;
 }
 
-/* about */
-.about .container {
-    height: 770px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+/* Form */
+.form {
+    margin: 80px 0;
 }
 
-.about h2 {
-    font-size: 3rem;
+.form input {
+    margin-bottom: 25px;
 }
 
-.about-list {
-    line-height: 2.5;
+.form input:focus ~ label,
+.form textarea:focus ~ label,
+.form input:valid ~ label,
+.form textarea:valid ~ label {
+    font-size: 0.75em;
+    color: #999;
+    top: -5px;
+    transition: all 0.225s ease;
 }
 
-.about-list p {
-    position: relative;
-    display: flex;
-    align-items: center;
-    font-size: 1.5rem;
+.form input,
+.form textarea {
+    padding: 10px;
+    border: 0;
+    width: 100%;
+    font-size: 1rem;
+    background-color: #2d2d2d;
+    color: white;
+    border-radius: 4px;
 }
 
-.about-list img {
-    width: 40px;
-    height: 40px;
-    padding-right: 10px;
+.form input:focus,
+.form textarea:focus {
+    outline: 0;
 }
 
-/* orientation */
-.orientation {
-    text-align: center;
-    margin-bottom: 150px;
+.form input:focus ~ span,
+.form textarea:focus ~ span {
+    width: 100%;
+    transition: all 0.075s ease;
 }
 
-.orientation h2 {
-    font-size: 3rem;
-    margin-bottom: 30px;
+.form textarea {
+    width: 100%;
+    min-height: 5em;
 }
 
-.orientation p {
-    font-size: 1.2rem;
-}
-
-/* Complaint */
-.complaint {
-    background: #f9e75ca6;
-    padding: 50px 0;
-    margin-bottom: 0px;
-    background-image: url(../../public/img/enchente.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-.complaint-list {
-    display: grid;
-    gap: 30px;
-    justify-content: center;
-    grid-template-columns: repeat(3, 200px);
-}
-
-.complaint-list li {
-    display: grid;
-    position: relative;
-    background: #fff;
-    padding: 15px;
-    width: 200px;
-    height: 200px;
-    border-radius: 15px;
-}
-
-.complaint-list li h3 {
-    margin-bottom: -25px;
-}
-
-.complaint-list li a {
-    position: absolute;
-    bottom: 0;
-    margin-left: 15px;
-    margin-bottom: 15px;
-    font-weight: bold;
+.button {
+    margin-top: 25px;
 }
 
 /* Footer */
